@@ -2,7 +2,7 @@
 A demo Spring Boot App for API Automation Testing
 
 # Purpose
-* API Testing automation performded programmatically.
+* API Testing automation performed programmatically.
 * For Testing REST API I am using  a sample REST API from https://openweathermap.org/api
 * For testing SOAP API I am using a sample SOAP wsdl from http://currencyconverter.kowabunga.net/converter.asmx?wsdl
 * The test cases demonstrates the capability of Rest Assured to programmatically generate response for SOAP and REST API.
