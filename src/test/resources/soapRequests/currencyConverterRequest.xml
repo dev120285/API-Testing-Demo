@@ -1,0 +1,14 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tem="http://tempuri.org/"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://schemas.xmlsoap.org/soap/envelope/ ">
+    <soapenv:Header/>
+    <soapenv:Body>
+        <tem:GetConversionRate>
+            <!--Optional:-->
+            <tem:CurrencyFrom>USD</tem:CurrencyFrom>
+            <!--Optional:-->
+            <tem:CurrencyTo>INR</tem:CurrencyTo>
+            <tem:RateDate>2019-08-22T00:00:00</tem:RateDate>
+        </tem:GetConversionRate>
+    </soapenv:Body>
+</soapenv:Envelope>
