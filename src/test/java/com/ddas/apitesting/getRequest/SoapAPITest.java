@@ -3,26 +3,22 @@ package com.ddas.apitesting.getRequest;
 
 
 import io.restassured.RestAssured;
-
 import io.restassured.path.xml.XmlPath;
 import io.restassured.response.Response;
 import org.apache.commons.io.IOUtils;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.test.context.junit4.SpringRunner;
 
-
-import java.io.FileInputStream;
 import java.io.InputStream;
 
-import static io.restassured.RestAssured.get;
 import static io.restassured.RestAssured.given;
 
 /**
- *
+ * This class launches the SOAP Testing API using rest Assured.
+ * @author :Debdutta Das
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest
@@ -32,6 +28,7 @@ public class SoapAPITest {
     private String  BASE_URI = "http://currencyconverter.kowabunga.net";
     private String  RESOURCE_URI = "/converter.asmx";
     private Integer STATUS_CODE_OK = 200;
+    public static String TIME_SUFFIX = " seconds";
 
     /**
      * @throws Exception
@@ -51,6 +48,6 @@ public class SoapAPITest {
         String rate = xmlPath.getString("GetConversionRateResult");
         System.err.println("Conversion Rate is :" +rate);
         long time = response.getTime();
-        System.err.println("Completion Time  :" +time);
+        System.err.println("Completion Time  :" +time + TIME_SUFFIX);
     }
 }

@@ -10,13 +10,13 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.nio.file.Files;
 import java.util.concurrent.TimeUnit;
 
 import static io.restassured.RestAssured.get;
 
 /**
- *
+ * This class launches the REST Testing API using rest Assured.
+ * @author :Debdutta Das
  */
 @RunWith(SpringRunner.class)
 @SpringBootTest
